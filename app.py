@@ -4,8 +4,9 @@ import glob
 
 def main():
     src_dir = os.environ['SRC_DIR']
+    src_file_pattern = os.environ.setdefault('SRC_FILE_PATTERN', 'NYSE*.txt.gz')
     #tgt_dir = os.environ['TGT_DIR']
-    src_file_names = sorted(glob.glob(f'{src_dir}/NYSE*.txt.gz'))
+    src_file_names = sorted(glob.glob(f'{src_dir}/{src_file_pattern}'))
     tgt_file_names = [
         file.replace('txt', 'json').replace('nyse_data', 'nyse_json') 
         for file in src_file_names
