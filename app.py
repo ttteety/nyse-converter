@@ -6,7 +6,7 @@ import logging
 def main():
     logging.basicConfig(
         level=logging.INFO,
-        filename='logs/ffc.log',
+        filename='logs/nc.log',
         format='%(levelname)s %(asctime)s %(message)s',
         datefmt='%Y-%m-%d %I:%M:%S %p'
     )
